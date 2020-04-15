@@ -4,7 +4,7 @@
   function getNameByProvince1($csv, $province) {
     if (($file = fopen($csv, "r") !== FALSE) {
       // Loop the row of csv file
-      while (($row = fgetcsv($file)) !== FALSE) {
+      while ( ($row = fgetcsv($file) ) !== FALSE ) {
         if($row[3] == $province) {
           echo $row[0] . '<br>';
         } 
@@ -43,4 +43,5 @@
   }
   
   getNameByProvince2('address - address.csv', 'Ontario', 'test.csv');
+        
 ?>
